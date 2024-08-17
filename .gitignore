@@ -1,0 +1,9 @@
+mednotes_api/myenv
+mednotes_api/mednotes_api/__pycache__
+
+**/__pycache__/
+
+# Django migrations
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
