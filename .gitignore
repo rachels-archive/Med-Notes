@@ -3,6 +3,8 @@ mednotes_api/mednotes_api/__pycache__
 
 **/__pycache__/
 
+**/.DS_Store
+
 # Django migrations
 **/migrations/**
 !**/migrations
