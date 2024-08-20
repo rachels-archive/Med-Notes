@@ -27,3 +27,18 @@ class Attachment(models.Model):
 
     def __str__(self):
         return self.file.name
+
+
+def save(self, *args, **kwargs):
+    if not self.slug:
+        self.slug = self._generate_unique_slug()
+    super().save(*args, **kwargs)
+
+def _generate_unique_slug(self):
+    slug_base = slugify(self.tile)
+    unique_slug = slug_base
+
+    while Note.objects.filter(slug = unique_slug).exists():
+        unique_slug = f"{slug_base}-{get_random_string(5)}"
+
+    return unique_slug
